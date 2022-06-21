@@ -1,0 +1,21 @@
+{
+    "name": "Better Latte",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+          "matches": ["https://*.shibboleth.brandeis.edu/idp/*"],
+          "css": ["home-page.css"],
+          "js": ["home-page.js"]
+        },
+        {
+          "matches": ["https://*.shibboleth.brandeis.edu/idp/*"],
+          "css": ["home-page.css"],
+          "js": ["home-page.js"]
+        }
+      ],
+    "action": {
+          "default_popup": "popup.html"
+      }
+  }
