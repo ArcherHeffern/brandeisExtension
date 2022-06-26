@@ -52,23 +52,7 @@ body:after {
   font-size: 2rem;
   margin: 20px;
 }
-/* test */
-/* .dockLi {
-  color: var(--textColor);
-  border: 2px solid var(--brandeisBlue);
-  background: var(--brandeisBlueFaded);
-  padding: 10px 180px;
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background var(--transitionTime);
-  cursor: pointer;
-}
-.dockLi:hover {
-  background: var(--brandeisBlue); */
-/* } */
-/* -------------------------------------------------------------------- */
-/* test */
+
 .dockLi {
   color: var(--textColor);
   background: var(--brandeisBlueFaded);
@@ -132,10 +116,27 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .settingsContainer img {
   width: 100%;
 }
 
 .linkName {
   display: inline-block;
+}
+
+.settingsContainer img:hover {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
