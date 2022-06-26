@@ -1,10 +1,27 @@
+const brandeisSealImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Brandeis_University_seal.svg/1200px-Brandeis_University_seal.svg.png"
+alt = "brandeis University Seal"
+const latteUrl = "https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
+const workdayUrl = "https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
+const settingsUrl = "https://identity.brandeis.edu/"
+const settingsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png"
+const libraryDatabaseUrl = "http://databases.library.brandeis.edu/"
+const oneSearchUrl = "http://search.library.brandeis.edu/"
+const connectCommunityUrl = "https://alumni.brandeis.edu/profile_login"
+const handshakeUrl = "https://brandeis.joinhandshake.com/login"
+const BUSSUrl = "https://pay.brandeis.edu/"
+const echoUrl = "https://echo360.org/home"
+const sageUrl = "https://www.brandeis.edu/sage/index.html"
+const whoCashUrl = "https://get.cbord.com/whocash/"
+const financialAidUrl = "https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx"
+const marketPlaceUrl = "https://brandeis.coupahost.com/"
+const campusCalendarUrl = "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps"
+
 const html = `
     <main class="main">
       <div class="logoContainer">
         <img
           class="brandeisSeal"
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Brandeis_University_seal.svg/1200px-Brandeis_University_seal.svg.png"
-          alt="brandeis University Seal"
+          src= ${brandeisSealImageUrl}
         />
       </div>
       <div>
@@ -14,13 +31,13 @@ const html = `
         <ul class="dockUl">
           <li class="dockLi">
             <a
-              href="https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
+              href= ${latteUrl}
               ><div class="linkName">Latte</div></a
             >
           </li>
           <li class="dockLi">
             <a
-              href="https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
+              href=${workdayUrl}
               ><div class="linkName">Workday</div></a
             >
           </li>
@@ -33,8 +50,8 @@ const html = `
     </main>
     <footer>
       <span class="settingsContainer">
-        <a href="https://identity.brandeis.edu/">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png" alt="Settings" />
+        <a href=${settingsUrl}>
+          <img src=${settingsImg} alt="Settings" />
         </a>
       </span>
     </footer>
@@ -43,30 +60,30 @@ const html = `
       <span class="misc">Misc</span>
       <ul class="miscUl">
         <li>
-          <a href="http://databases.library.brandeis.edu/">Library Database</a>
+          <a href=${libraryDatabaseUrl}>Library Database</a>
         </li>
-        <li><a href="http://search.library.brandeis.edu/">Onesearch</a></li>
+        <li><a href=${oneSearchUrl}>Onesearch</a></li>
         <li>
-          <a href="https://alumni.brandeis.edu/profile_login"
+          <a href=${connectCommunityUrl}
             >B connect Community</a
           >
         </li>
         <li>
-          <a href="https://brandeis.joinhandshake.com/login">Handshake</a>
+          <a href=${handshakeUrl}>Handshake</a>
         </li>
-        <li><a href="https://pay.brandeis.edu/">BUSS</a></li>
-        <li><a href="https://echo360.org/home">Echo 360</a></li>
-        <li><a href="https://www.brandeis.edu/sage/index.html">Sage</a></li>
-        <li><a href="https://get.cbord.com/whocash/">WhoCash/Meal Plan</a></li>
+        <li><a href=${BUSSUrl}>BUSS</a></li>
+        <li><a href=${echoUrl}>Echo 360</a></li>
+        <li><a href=${sageUrl}>Sage</a></li>
+        <li><a href=${whoCashUrl}>WhoCash/Meal Plan</a></li>
         <li>
-          <a href="https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx"
+          <a href=${financialAidUrl}
             >Financial Aid</a
           >
         </li>
-        <li><a href="https://brandeis.coupahost.com/">MarketPlace+</a></li>
+        <li><a href=${marketPlaceUrl}>MarketPlace+</a></li>
         <li>
           <a
-            href="http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps"
+            href=${campusCalendarUrl}
             >Campus Calendar</a
           >
         </li>
