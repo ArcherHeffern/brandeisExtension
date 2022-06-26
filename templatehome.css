@@ -7,7 +7,7 @@
   --transitionTime: 0.3s;
 }
 
-html body {
+body {
   background: url(images/visitBrandeis.jpg);
   box-sizing: border-box;
   background-size: cover;
