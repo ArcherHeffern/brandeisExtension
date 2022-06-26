@@ -90,6 +90,30 @@ const html = `
       </ul>
     </div>
 `
+
+//remove all css
+Array.prototype.forEach.call(document.querySelectorAll('link[rel=stylesheet]'), function (element) {
+  try {
+    element.parentNode.removeChild(element);
+  } catch (err) { }
+});
+
 document.body.innerHTML = '';
 
 document.body.innerHTML = html
+
+//popup logic 
+const othersButton = document.querySelector(".others")
+const hiddenContainer = document.querySelector(".hiddenContainer")
+othersButton.addEventListener("click", () => {
+  let state = hiddenContainer.style.display
+  if (state === "none") {
+    hiddenContainer.style.display = "block";
+  }
+})
+
+document.addEventListener('mouseup', function (e) {
+  if (!hiddenContainer.contains(e.target)) {
+    hiddenContainer.style.display = 'none';
+  }
+});
