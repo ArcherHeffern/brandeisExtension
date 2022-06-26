@@ -6,13 +6,8 @@
     "content_scripts": [
         {
           "matches": ["https://*.shibboleth.brandeis.edu/idp/"],
-          "css": ["home-page.css"],
-          "js": ["home-page.js"]
-        },
-        {
-          "matches": ["https://wd5.myworkday.com/brandeis/d/home.htmld"],
-          "css": ["workday-home.css"],
-          "js": ["workday-home.js"]
+          "css": ["templatehome.css"],
+          "js": ["insertHTML.js"]
         }
       ],
     "action": {
