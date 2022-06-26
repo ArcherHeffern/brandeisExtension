@@ -1,6 +1,6 @@
 const brandeisSealImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Brandeis_University_seal.svg/1200px-Brandeis_University_seal.svg.png"
 alt = "brandeis University Seal"
-const latteUrl = "https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
+const latteUrl = "https://moodle2.brandeis.edu/"
 const workdayUrl = "https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
 const settingsUrl = "https://identity.brandeis.edu/"
 const settingsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png"
