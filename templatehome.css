@@ -52,23 +52,7 @@ main {
   font-size: 2rem;
   margin: 20px;
 }
-/* test */
-/* .dockLi {
-  color: var(--textColor);
-  border: 2px solid var(--brandeisBlue);
-  background: var(--brandeisBlueFaded);
-  padding: 10px 180px;
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background var(--transitionTime);
-  cursor: pointer;
-}
-.dockLi:hover {
-  background: var(--brandeisBlue); */
-/* } */
-/* -------------------------------------------------------------------- */
-/* test */
+
 .dockLi {
   color: var(--textColor);
   background: var(--brandeisBlueFaded);
@@ -106,25 +90,6 @@ footer {
   right: 20px;
 }
 
-.hiddenContainer {
-  background: var(--textColor);
-  border: 2px solid black;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
-  height: 500px;
-  text-align: center;
-  display: none;
-}
-.miscUl li {
-  list-style-type: none;
-  text-align: center;
-}
-
 .settingsContainer {
   width: 50px;
   border-radius: 50%;
@@ -136,6 +101,69 @@ footer {
   width: 100%;
 }
 
-.linkName {
-  display: inline-block;
+.settingsContainer img:hover {
+  animation: rotate 2s forwards infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hiddenContainer {
+  background: var(--brandeisBlue);
+  border: 2px solid black;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.misc {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.miscUl {
+  display: flex;
+}
+
+.miscUl li {
+  background: var(--brandeisBlue);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  list-style-type: none;
+  width: 200px;
+  justify-content: center;
+}
+
+.miscUl li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.group1,
+.group2,
+.group3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
