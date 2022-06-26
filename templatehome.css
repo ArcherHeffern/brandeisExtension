@@ -8,7 +8,7 @@
 }
 
 body {
-  background: url(visitBrandeis.jpg);
+  background: url(images/visitBrandeis.jpg);
   box-sizing: border-box;
   background-size: cover;
   background-position-x: center;
@@ -131,8 +131,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(18, 51, 116, 1);
-  border: 2px solid var(--textColor); */
 }
 .settingsContainer img {
   width: 100%;
