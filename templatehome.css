@@ -7,8 +7,8 @@
   --transitionTime: 0.3s;
 }
 
-body {
-  background: url(https://www.commonapp.org/static/6204cb8d519e3e875a140c6bd07190b0/brandeis-university_41.jpg);
+html body {
+  background: url(images/visitBrandeis.jpg);
   box-sizing: border-box;
   background-size: cover;
   background-position-x: center;
@@ -17,7 +17,7 @@ body {
   width: 100%;
 }
 
-body:after {
+html body:after {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -29,7 +29,7 @@ body:after {
   z-index: -1;
 }
 
-.main {
+main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

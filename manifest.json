@@ -6,8 +6,8 @@
     "content_scripts": [
         {
           "matches": ["https://*.shibboleth.brandeis.edu/idp/"],
-          "css": ["templatehome.css"],
-          "js": ["insertHTML.js"]
+          "css": ["extensionhome.css"],
+          "js": ["extensionhome.js"]
         }
       ],
     "action": {
