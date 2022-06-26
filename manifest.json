@@ -8,6 +8,11 @@
           "matches": ["https://*.shibboleth.brandeis.edu/idp/"],
           "css": ["extensionhome.css"],
           "js": ["extensionhome.js"]
+        },
+        {
+          "matches": ["https://moodle2.brandeis.edu/my/"],
+          "css": ["extensionLatte.css"],
+          "js": ["extensionLatte.js"]
         }
       ],
     "action": {
