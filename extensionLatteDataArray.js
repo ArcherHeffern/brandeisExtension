@@ -9,7 +9,6 @@ for (let i = 0; i < tablesAndName.length; i++) {
     let semester = semesterSectionHTML.querySelector(".collapsibleregioncaption a").textContent
     //select all course names
     let classes = semesterSectionHTML.querySelectorAll(".c0 a")
-    // let classesUrl = semesterSectionHTML.querySelectorAll(".c0 a")
     //select all course instructors
     let instructors = semesterSectionHTML.querySelectorAll(".c1")
     //select all course start dates
@@ -20,6 +19,7 @@ for (let i = 0; i < tablesAndName.length; i++) {
     for (let i = 0; i < classes.length; i++) {
         let classData = []
         classData.push(classes[i].textContent)
+        classData.push(classes[i].getAttribute("href"))
         classData.push(instructors[i].textContent)
         classData.push(courseStartDate[i].textContent)
         semesterData.push(classData)
