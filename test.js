@@ -1,4 +1,9 @@
-
+let needed = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
+needed = Array(needed)
+console.log(needed);
+console.log(needed[0][0]);
+// console.log(needed[0].HTMLCollection[0]);
+// const needed2 = document.querySelector(".WIQK")
 let div = document.createElement("div")
 div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 <div
@@ -28,4 +33,6 @@ div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 </div>
 </div>
 `
-document.body.appendChild(div)
+
+needed.appendChild(div)
+needed2.appendChild(div)

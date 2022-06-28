@@ -1,6 +1,16 @@
-const outerDiv = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
-let div = document.createElement("div")
-div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
+//TODO find out when workday is done loading
+setTimeout(myMain, 5000)
+
+function myMain(evt) {
+    // DO YOUR STUFF HERE.
+    let outerDiv = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
+
+
+    outerDiv = Array(outerDiv)
+    console.log(outerDiv[0][0])
+
+    let div = document.createElement("span")
+    div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 <div
   role="button"
   data-automation-id="icon"
@@ -28,5 +38,5 @@ div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 </div>
 </div>
 `
-// outerDiv.appendChild(div)
-document.body.appendChild(div)
+    outerDiv[0][0].prepend(div)
+}
