@@ -4,7 +4,6 @@ const tablesAndName = document.getElementsByClassName("collapsibleregion block-m
 //selects all semester block htmls
 let tablesAndNameArray = []
 for (let i = 0; i < tablesAndName.length; i++) {
-    console.log(tablesAndNameArray[i])
     tablesAndNameArray.push(tablesAndName[i].innerHTML)
 }
 //TODO: parse through tablesAndNameArray and create nested arrays of semesters and classes
@@ -16,6 +15,16 @@ for (let i = 0; i < tablesAndName.length; i++) {
     let semesterSectionHTML = tablesAndName[i]
     //select semester name
     let semester = semesterSectionHTML.querySelector(".collapsibleregioncaption a").textContent
+    console.log(semester);
+    //select classes
+    let classes = semesterSectionHTML.querySelectorAll(".course_hide")
+    let classesName = []
+    for (let i = 0; i < classes.length; i++) {
+        classesName.push(classes[i].textContent)
+    }
+    // let classesUrl = classes.property.href
+    for (element of classesName) { console.log(element) }
+    // for (element of classesUrl) { console.log(element) }
     //select courses
     // semesterClassClassDataList = push([semester, [courseList]])
 }
