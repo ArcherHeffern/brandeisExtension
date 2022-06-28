@@ -16,17 +16,22 @@ for (let i = 0; i < tablesAndName.length; i++) {
     //select semester name
     let semester = semesterSectionHTML.querySelector(".collapsibleregioncaption a").textContent
     console.log(semester);
-    //select classes
-    let classes = semesterSectionHTML.querySelectorAll(".course_hide")
-    let classesName = []
+    //select all grid boxes by data type
+    let classes = semesterSectionHTML.querySelectorAll(".c0 a")
+    // let classesUrl = semesterSectionHTML.querySelectorAll(".c0 a")
+    let instructors = semesterSectionHTML.querySelectorAll(".c1")
+    let courseStartDate = semesterSectionHTML.querySelectorAll(".c2")
+
+    let semesterData = []
     for (let i = 0; i < classes.length; i++) {
-        classesName.push(classes[i].textContent)
+        let classData = []
+        classData.push(classes[i].textContent)
+        classData.push(instructors[i].textContent)
+        classData.push(courseStartDate[i].textContent)
+        // console.log(classData)
+        semesterData.push(classData)
     }
-    // let classesUrl = classes.property.href
-    for (element of classesName) { console.log(element) }
-    // for (element of classesUrl) { console.log(element) }
-    //select courses
-    // semesterClassClassDataList = push([semester, [courseList]])
+    // console.log(semesterData)
 }
 
 //delete all page data
