@@ -1,4 +1,4 @@
-const outerDiv = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
+
 let div = document.createElement("div")
 div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 <div
@@ -28,5 +28,4 @@ div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
 </div>
 </div>
 `
-// outerDiv.appendChild(div)
 document.body.appendChild(div)

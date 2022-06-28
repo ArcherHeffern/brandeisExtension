@@ -15,6 +15,7 @@
           "js": ["extensionLatteDataArray.js"]
         },
         {
+          "run_at": "document_end",
           "matches": ["https://wd5.myworkday.com/brandeis/d/task/2998$30300.htmld"],
           "css": ["backButton.css"],
           "js": ["backButton.js"]
