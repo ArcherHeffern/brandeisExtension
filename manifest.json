@@ -13,6 +13,11 @@
           "matches": ["https://moodle2.brandeis.edu/my/"],
           "css": ["extensionLatte.css"],
           "js": ["extensionLatte.js"]
+        },
+        {
+          "matches": ["https://wd5.myworkday.com/brandeis/d/task/2998$30300.htmld"],
+          "css": ["backButton.css"],
+          "js": ["backButton.js"]
         }
       ],
     "action": {
