@@ -1,9 +1,17 @@
+const LINK = `"javascript:history.go(-1)" [Go Back]`
+// const LINK = `"https://wd5.myworkday.com/brandeis/d/inst/"`
 //TODO find out when workday is done loading
+//TODO find out how to go back, link does not work
 //might be more worth taking element out of flow and positioning absolutely
 //check for websocket connection
-
+console.log("Hello world");
 let outerDiv
-let intervalVal = setInterval(checkForClass, 100)
+let intervalVal
+let counter = 0
+addEventListener("load", () => {
+    intervalVal = setInterval(checkForClass, 100)
+})
+
 function checkForClass() {
     outerDiv = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
     console.log(outerDiv);
@@ -11,6 +19,9 @@ function checkForClass() {
         clearInterval(intervalVal)
         console.log("Yay");
         myMain()
+    }
+    else if (counter > 100) {
+        clearInterval(intervalVal)
     }
 }
 // window.addEventListener("load", hello)
@@ -21,7 +32,7 @@ function myMain() {
     console.log(outerDiv[0][0])
 
     let div = document.createElement("span")
-    div.innerHTML = "<div>Hello world</div>"
+    div.innerHTML = `<div><a href=${LINK} id="insertedbackButtonLink">Go back</a></div>`
     //     div.innerHTML = `<div data-automation-id="viewStackBack" class="WK2T">
     // <div
     //   role="button"
@@ -52,3 +63,4 @@ function myMain() {
     // `
     outerDiv[0][0].prepend(div)
 }
+

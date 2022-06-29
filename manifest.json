@@ -12,7 +12,7 @@
         {
           "matches": ["https://moodle2.brandeis.edu/my/"],
           "css": ["extensionLatte.css"],
-          "js": ["extensionLatteDataArray.js"]
+          "js": ["extensionLatte.js"]
         },
         {
           "run_at": "document_end",
