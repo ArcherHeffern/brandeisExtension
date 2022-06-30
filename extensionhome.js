@@ -142,7 +142,8 @@ function randomBackgroundIndex() {
 
 //Render misc items
 
-for (element in miscList) {
+for (i in miscList) {
+  element = miscList[i]
   let miscItemHTML = `      
 <div class="item2 item">
 <a href="${element[1]}">
