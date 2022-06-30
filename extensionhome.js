@@ -10,17 +10,17 @@ const settingsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/I
 //for each item: Name, Url, Image, Description
 
 const miscList = [
-  ["Libary Database", "http://databases.library.brandeis.edu/", "/images/brandeisscholar.png", ""],
-  ["OneSearch", "http://search.library.brandeis.edu/", "/images/library.png", ""],
-  ["Connect Community", "https://alumni.brandeis.edu/profile_login", "/images/bconnect.png", ""],
-  ["HandShake", "https://brandeis.joinhandshake.com/login", "/images/handshake.png", ""],
-  ["BUSS", "https://pay.brandeis.edu/", "/images/buss.png", ""],
-  ["Echo", "https://echo360.org/home", "/images/echo360.png", ""],
-  ["Sage", "https://www.brandeis.edu/sage/index.html", "/images/sage.png", ""],
-  ["WhoCash", "https://get.cbord.com/whocash/", "/images/whocard.png", ""],
-  ["Financial Aid", "https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx", "/images/financialaid.png", ""],
-  ["Marketplace", "https://brandeis.coupahost.com/", "/images/marketplace.png", ""],
-  ["Campus Calendar", "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps", "/images/campus-calendar.png", ""]
+  ["Libary Database", "http://databases.library.brandeis.edu/", "/images/brandeisscholar.png", "Portal to Brandeis's library database"],
+  ["WhoCash", "https://get.cbord.com/whocash/", "/images/whocard.png", "Brandeis's GET site, where you can manage your WhoCash, view meal plan balances, and more"],
+  ["Campus Calendar", "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps", "/images/campus-calendar.png", "Find out when and where cool Brandeis events are happening!"],
+  ["HandShake", "https://brandeis.joinhandshake.com/login", "/images/handshake.png", "Student resource for getting jobs, interships, reaching out, and more!"],
+  ["OneSearch", "http://search.library.brandeis.edu/", "/images/library.png", "OneSearch provides simple, one-stop searching for all of the library's physical collections as well as many of our online collections. It's also a portal to manage your research and your library account."],
+  ["B Connect Community", "https://alumni.brandeis.edu/profile_login", "/images/bconnect.png", "The new B Connect is a powerful platform for Brandeis students and alumni. It enables you to use the trusted and vibrant Brandeis environment to expand your professional and personal networks."],
+  ["BUSS", "https://pay.brandeis.edu/", "/images/buss.png", "Not loading"],
+  ["Echo360", "https://echo360.org/home", "/images/echo360.png", "Platform for seeing course information, not frequently used by professors"],
+  ["Sage", "https://www.brandeis.edu/sage/index.html", "/images/sage.png", "Sage now requires VPN access and is no longer available to students for self-service."],
+  ["Financial Aid", "https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx", "/images/financialaid.png", "Apply for financial aid"],
+  ["Marketplace", "https://brandeis.coupahost.com/", "/images/marketplace.png", "Doesn't seem to work?"],
 ]
 
 const backgroundUrl = ["https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2021/06/1024/512/Brandeis-University-iStock.jpg?ve=1&tl=1", "https://www.brandeis.edu/science/images/ssc-21.jpg", "https://www.usnews.com/dims4/USNEWS/bb8e5c8/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F2a%2Fa463251ce974ebae64dd9b13f6484b%2F_MG_9777.jpg", "https://www.brandeis.edu/admissions/visit/images/mandel.jpg"]
