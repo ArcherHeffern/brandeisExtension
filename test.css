@@ -12,11 +12,15 @@ body {
 .container {
   width: 600px;
   height: 500px;
+  border: 2px solid black;
+  padding: 20px;
 }
 .item {
+  box-sizing: border-box;
   width: 100%;
   margin-bottom: 30px;
   border: 2px solid black;
+  padding: 20px;
   display: flex;
 }
 .imgContainer {

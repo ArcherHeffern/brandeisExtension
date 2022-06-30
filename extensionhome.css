@@ -127,7 +127,7 @@ footer {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 200px;
+  bottom: 150px;
   margin-left: auto;
   margin-right: auto;
   width: 800px;
@@ -135,6 +135,7 @@ footer {
   text-align: center;
   display: none;
   overflow: auto;
+  padding: 20px;
 }
 
 .miscListItem {
@@ -142,22 +143,28 @@ footer {
   margin-bottom: 30px;
   border: 2px solid black;
   display: flex;
+  box-sizing: border-box;
 }
 .miscListimgContainer {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-right: 100px;
 }
 .miscListImgContainer img {
   height: 100px;
+  border: 2px solid black;
 }
 .miscListTextContainer {
   width: 100%;
+  padding-left: 20px;
+}
+.miscListTextContainer h1 {
+  text-align: left;
 }
 
 .miscListA {
+  width: 100%;
   display: flex;
   padding: 10px;
   color: black;

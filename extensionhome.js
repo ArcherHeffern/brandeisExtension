@@ -69,7 +69,7 @@ const html = `
     </footer>
 
     <div class="hiddenContainer">
-      <span class="misc">Misc</span>
+      <h1 class="misc">Misc Items</h1>
     </div>
 `
 
