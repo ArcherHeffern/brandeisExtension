@@ -37,24 +37,24 @@ const html = `
         <p class="schoolName">Brandeis University</p>
       </div>
       <div class="dockContainer">
-        <ul class="dockUl">
-          <li class="dockLi">
-            <a
-              href= ${latteUrl}
-              ><div class="linkName">Latte</div></a
-            >
-          </li>
-          <li class="dockLi">
-            <a
-              href=${workdayUrl}
-              ><div class="linkName">Workday</div></a
-            >
-          </li>
-          <li class="dockLi others">
-            <!-- <div class="dockLi others">Other</div> -->
-            <p>Others</p>
-          </li>
-        </ul>
+      <ul class="dockUl">
+      <li class="dockLi">
+        <a
+          href= ${latteUrl}
+          ><div class="linkName">Latte</div></a
+        >
+      </li>
+      <li class="dockLi">
+        <a
+          href=${workdayUrl}
+          ><div class="linkName">Workday</div></a
+        >
+      </li>
+      <li class="dockLi others">
+        <!-- <div class="dockLi others">Other</div> -->
+        <p>Others</p>
+      </li>
+    </ul>
       </div>
     </main>
     <footer>
@@ -70,36 +70,6 @@ const html = `
 
     <div class="hiddenContainer">
       <span class="misc">Misc</span>
-      <ul class="miscUl">
-        <li>
-          <a href=${libraryDatabaseUrl}>Library Database</a>
-        </li>
-        <li><a href=${oneSearchUrl}>Onesearch</a></li>
-        <li>
-          <a href=${connectCommunityUrl}
-            >B connect Community</a
-          >
-        </li>
-        <li>
-          <a href=${handshakeUrl}>Handshake</a>
-        </li>
-        <li><a href=${BUSSUrl}>BUSS</a></li>
-        <li><a href=${echoUrl}>Echo 360</a></li>
-        <li><a href=${sageUrl}>Sage</a></li>
-        <li><a href=${whoCashUrl}>WhoCash/Meal Plan</a></li>
-        <li>
-          <a href=${financialAidUrl}
-            >Financial Aid</a
-          >
-        </li>
-        <li><a href=${marketPlaceUrl}>MarketPlace+</a></li>
-        <li>
-          <a
-            href=${campusCalendarUrl}
-            >Campus Calendar</a
-          >
-        </li>
-      </ul>
     </div>
 `
 
@@ -115,6 +85,7 @@ document.body.innerHTML = '';
 document.body.innerHTML = html
 
 //--------------------------------------------------------------------
+//Global vars
 const othersButton = document.querySelector(".others")
 const hiddenContainer = document.querySelector(".hiddenContainer")
 const backgroundButton = document.getElementById("backgroundButton")
@@ -125,6 +96,7 @@ let lastBackground = JSON.parse(localStorage.getItem("lastBackground"))
 let background = Boolean(JSON.parse(localStorage.getItem("background")))
 let randomBackGroundPosition = true
 
+//background rendering
 background ? getRandomBackground(lastBackground, randomBackGroundPosition) : renderBackground(background)
 
 if (!lastBackground) {
@@ -137,32 +109,6 @@ function renderBackground(render) {
   } else {
     document.body.style.background = "white"
   }
-}
-
-//popup logic 
-
-othersButton.addEventListener("click", () => {
-  let state = hiddenContainer.style.display
-  if (state === "none") {
-    hiddenContainer.style.display = "block";
-  }
-})
-
-document.addEventListener('mouseup', (e) => {
-  if (!hiddenContainer.contains(e.target)) {
-    hiddenContainer.style.display = 'none';
-  }
-});
-
-//background button logic
-backgroundButton.addEventListener("click", () => {
-  background = !background
-  localStorage.setItem("background", JSON.stringify(background))
-  renderBackground(background)
-})
-
-function randomBackgroundIndex() {
-  return Math.floor(Math.random() * backgroundUrl.length)
 }
 
 //index is what index of background url is selected, randombackgroundposition is T/F value if we want a random background position
@@ -181,3 +127,51 @@ function getRandomBackground(index, randomBackGroundPosition) {
   document.body.style.background = `url(${backgroundUrl[index]})`
   document.body.style.backgroundSize = "cover"
 }
+
+//background button logic
+
+backgroundButton.addEventListener("click", () => {
+  background = !background
+  localStorage.setItem("background", JSON.stringify(background))
+  renderBackground(background)
+})
+
+function randomBackgroundIndex() {
+  return Math.floor(Math.random() * backgroundUrl.length)
+}
+
+//Render misc items
+
+for (element in miscList) {
+  let miscItemHTML = `      
+<div class="item2 item">
+<a href="${element[1]}">
+  <div class="imgContainer">
+    <img src="${element[2]}" alt="image" />
+  </div>
+  <div class="textContainer">
+    <h1>${element[0]}</h1>
+    <p>
+      ${element[3]}
+    </p>
+  </div>
+</a>
+</div>`
+
+  hiddenContainer.innerHTML += miscItemHTML
+}
+
+//popup logic 
+
+othersButton.addEventListener("click", () => {
+  let state = hiddenContainer.style.display
+  if (state === "none") {
+    hiddenContainer.style.display = "block";
+  }
+})
+
+document.addEventListener('mouseup', (e) => {
+  if (!hiddenContainer.contains(e.target)) {
+    hiddenContainer.style.display = 'none';
+  }
+});
