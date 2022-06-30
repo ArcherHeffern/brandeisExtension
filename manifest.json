@@ -1,6 +1,6 @@
 {
     "name": "Better Latte",
-    "description": "Build an Extension!",
+    "description": "UI improvement to the Brandeis Portal",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
