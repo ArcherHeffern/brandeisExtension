@@ -1,3 +1,6 @@
+//TODO: add information button - improve "others" UI - create settings bar - better selection indication
+
+
 const brandeisSealImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Brandeis_University_seal.svg/1200px-Brandeis_University_seal.svg.png"
 alt = "brandeis University Seal"
 const latteUrl = "https://moodle2.brandeis.edu/"

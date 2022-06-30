@@ -1,10 +1,9 @@
-const LINK = `"javascript:history.go(-1)" [Go Back]`
-// const LINK = `"https://wd5.myworkday.com/brandeis/d/inst/"`
+// const LINK = `"javascript:history.go(-1)" [Go Back]`
+const LINK = `https://wd5.myworkday.com/brandeis/d/inst/13102!CK5mGhIKBggDEMenAhIICgYI1A0QkAE~*jdO3odMVMG0~/cacheable-task/14860$30.htmld#backheader=true`
 //TODO find out when workday is done loading
 //TODO find out how to go back, link does not work
 //might be more worth taking element out of flow and positioning absolutely
 //check for websocket connection
-console.log("Hello world");
 let outerDiv
 let intervalVal
 let counter = 0
@@ -24,7 +23,6 @@ function checkForClass() {
         clearInterval(intervalVal)
     }
 }
-// window.addEventListener("load", hello)
 
 function myMain() {
     let outerDiv = document.getElementsByClassName("WIQK WKQK WCUK WOSK WATK WBAB")
