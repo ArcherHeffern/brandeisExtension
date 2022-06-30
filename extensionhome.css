@@ -117,6 +117,7 @@ footer {
   height: 500px;
   text-align: center;
   display: none;
+  overflow: auto;
 }
 .miscUl li {
   list-style-type: none;

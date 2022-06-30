@@ -1,23 +1,28 @@
 //TODO: add information button - improve "others" UI - create settings bar - better selection indication
 
-
 const brandeisSealImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Brandeis_University_seal.svg/1200px-Brandeis_University_seal.svg.png"
 alt = "brandeis University Seal"
 const latteUrl = "https://moodle2.brandeis.edu/"
 const workdayUrl = "https://wd5.myworkday.com/wday/authgwy/brandeis/login.htmld"
 const settingsUrl = "https://identity.brandeis.edu/"
 const settingsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png"
-const libraryDatabaseUrl = "http://databases.library.brandeis.edu/"
-const oneSearchUrl = "http://search.library.brandeis.edu/"
-const connectCommunityUrl = "https://alumni.brandeis.edu/profile_login"
-const handshakeUrl = "https://brandeis.joinhandshake.com/login"
-const BUSSUrl = "https://pay.brandeis.edu/"
-const echoUrl = "https://echo360.org/home"
-const sageUrl = "https://www.brandeis.edu/sage/index.html"
-const whoCashUrl = "https://get.cbord.com/whocash/"
-const financialAidUrl = "https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx"
-const marketPlaceUrl = "https://brandeis.coupahost.com/"
-const campusCalendarUrl = "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps"
+
+//for each item: Name, Url, Image, Description
+
+const miscList = [
+  ["Libary Database", "http://databases.library.brandeis.edu/", "/images/brandeisscholar.png", ""],
+  ["OneSearch", "http://search.library.brandeis.edu/", "/images/library.png", ""],
+  ["Connect Community", "https://alumni.brandeis.edu/profile_login", "/images/bconnect.png", ""],
+  ["HandShake", "https://brandeis.joinhandshake.com/login", "/images/handshake.png", ""],
+  ["BUSS", "https://pay.brandeis.edu/", "/images/buss.png", ""],
+  ["Echo", "https://echo360.org/home", "/images/echo360.png", ""],
+  ["Sage", "https://www.brandeis.edu/sage/index.html", "/images/sage.png", ""],
+  ["WhoCash", "https://get.cbord.com/whocash/", "/images/whocard.png", ""],
+  ["Financial Aid", "https://netpartner.brandeis.edu/NetPartnerStudent/logon.aspx", "/images/financialaid.png", ""],
+  ["Marketplace", "https://brandeis.coupahost.com/", "/images/marketplace.png", ""],
+  ["Campus Calendar", "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps", "/images/campus-calendar.png", ""]
+]
+
 const backgroundUrl = ["https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2021/06/1024/512/Brandeis-University-iStock.jpg?ve=1&tl=1", "https://www.brandeis.edu/science/images/ssc-21.jpg", "https://www.usnews.com/dims4/USNEWS/bb8e5c8/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F2a%2Fa463251ce974ebae64dd9b13f6484b%2F_MG_9777.jpg", "https://www.brandeis.edu/admissions/visit/images/mandel.jpg"]
 
 const html = `
@@ -143,7 +148,7 @@ othersButton.addEventListener("click", () => {
   }
 })
 
-document.addEventListener('mouseup', function (e) {
+document.addEventListener('mouseup', (e) => {
   if (!hiddenContainer.contains(e.target)) {
     hiddenContainer.style.display = 'none';
   }
