@@ -145,12 +145,12 @@ function randomBackgroundIndex() {
 for (i in miscList) {
   element = miscList[i]
   let miscItemHTML = `      
-<div class="item2 item">
-<a href="${element[1]}">
-  <div class="imgContainer">
-    <img src="${element[2]}" alt="image" />
+<div class="miscListItem">
+<a href="${element[1]}" class="miscListA">
+  <div class="miscListImgContainer">
+    <img src="${element[2]}" alt="${element[0]}Image" />
   </div>
-  <div class="textContainer">
+  <div class="miscListTextContainer">
     <h1>${element[0]}</h1>
     <p>
       ${element[3]}
