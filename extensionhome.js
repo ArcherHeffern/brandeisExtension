@@ -16,36 +16,6 @@ const financialAidUrl = "https://netpartner.brandeis.edu/NetPartnerStudent/logon
 const marketPlaceUrl = "https://brandeis.coupahost.com/"
 const campusCalendarUrl = "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps"
 const backgroundUrl = ["https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2021/06/1024/512/Brandeis-University-iStock.jpg?ve=1&tl=1", "https://www.brandeis.edu/science/images/ssc-21.jpg", "https://www.usnews.com/dims4/USNEWS/bb8e5c8/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F2a%2Fa463251ce974ebae64dd9b13f6484b%2F_MG_9777.jpg", "https://www.brandeis.edu/admissions/visit/images/mandel.jpg"]
-let randomBackGroundPosition = true
-
-//go to local storage, find if they want background, and set background accordingly
-
-let lastBackground = JSON.parse(localStorage.getItem("lastBackground"))
-let background = JSON.parse(localStorage.getItem("background"))
-if (background === null) {
-  localStorage.setItem("background", JSON.stringify(false))
-  background = false
-  renderBackground(background)
-}
-else if (!background) {
-  renderBackground(background)
-}
-else if (background) {
-  getRandomBackground(lastBackground, randomBackGroundPosition)
-}
-console.log(background);
-
-if (!lastBackground) {
-  randomBackgroundIndex()
-}
-
-function renderBackground(render) {
-  if (render) {
-    getRandomBackground(randomBackgroundIndex())
-  } else {
-    document.body.style.background = "white"
-  }
-}
 
 const html = `
     <main class="main">
@@ -136,9 +106,33 @@ document.body.innerHTML = '';
 
 document.body.innerHTML = html
 
-//popup logic 
+//--------------------------------------------------------------------
 const othersButton = document.querySelector(".others")
 const hiddenContainer = document.querySelector(".hiddenContainer")
+const backgroundButton = document.getElementById("backgroundButton")
+const backgroundYarray = ["top", "center", "bottom"]
+const backgroundXarray = ["left", "center", "right"]
+
+let lastBackground = JSON.parse(localStorage.getItem("lastBackground"))
+let background = Boolean(JSON.parse(localStorage.getItem("background")))
+let randomBackGroundPosition = true
+
+background ? getRandomBackground(lastBackground, randomBackGroundPosition) : renderBackground(background)
+
+if (!lastBackground) {
+  randomBackgroundIndex()
+}
+
+function renderBackground(render) {
+  if (render) {
+    getRandomBackground(randomBackgroundIndex())
+  } else {
+    document.body.style.background = "white"
+  }
+}
+
+//popup logic 
+
 othersButton.addEventListener("click", () => {
   let state = hiddenContainer.style.display
   if (state === "none") {
@@ -152,9 +146,6 @@ document.addEventListener('mouseup', function (e) {
   }
 });
 
-//dont put var at top since it wont be declared
-const backgroundButton = document.getElementById("backgroundButton")
-
 //background button logic
 backgroundButton.addEventListener("click", () => {
   background = !background
@@ -164,16 +155,12 @@ backgroundButton.addEventListener("click", () => {
 
 function randomBackgroundIndex() {
   return Math.floor(Math.random() * backgroundUrl.length)
-
 }
 
 //index is what index of background url is selected, randombackgroundposition is T/F value if we want a random background position
 
 function getRandomBackground(index, randomBackGroundPosition) {
   localStorage.setItem("lastBackground", JSON.stringify(index))
-
-  let backgroundYarray = ["top", "center", "bottom"]
-  let backgroundXarray = ["left", "center", "right"]
 
   if (randomBackGroundPosition) {
     let randomYposition = String(backgroundYarray[Math.floor(Math.random() * backgroundYarray.length)])
