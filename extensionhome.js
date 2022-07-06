@@ -11,6 +11,7 @@ const settingsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/I
 
 const miscList = [
   ["Libary Database", "http://databases.library.brandeis.edu/", "/images/brandeisscholar.png", "Portal to Brandeis's library database"],
+  ["Myhousing", "https://brandeis.datacenter.adirondacksolutions.com/BRANDEIS_THDSS_PROD/index.html", "", "Brandeis housing portal"],
   ["WhoCash", "https://get.cbord.com/whocash/", "/images/whocard.png", "Brandeis's GET site, where you can manage your WhoCash, view meal plan balances, and more"],
   ["Campus Calendar", "http://www.brandeis.edu/events/index.html?utm_source=login&utm_campaign=apps", "/images/campus-calendar.png", "Find out when and where cool Brandeis events are happening!"],
   ["HandShake", "https://brandeis.joinhandshake.com/login", "/images/handshake.png", "Student resource for getting jobs, interships, reaching out, and more!"],
